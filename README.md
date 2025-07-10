@@ -84,6 +84,17 @@ result = detector.process_tick("EURUSD", {"bid": 1.0, "ask": 1.1})
 print(result)
 ```
 
+### GUI Example
+
+You can visualize model predictions using the `TradingGUI` class:
+
+```python
+from pocketoptionapi.gui import TradingGUI
+
+gui = TradingGUI(symbols=["EURUSD", "GBPUSD"])
+gui.run()
+```
+
 ## 🔧 Settings
 
 ### Main Dependencies
@@ -94,6 +105,7 @@ python-dateutil>=2.8.2
 pandas>=2.1.3
 numpy>=1.24.0
 scikit-learn>=1.3.0
+matplotlib>=3.7.0
 ```
 
 ### Getting the SSID

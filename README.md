@@ -86,7 +86,10 @@ print(result)
 
 ### GUI Example
 
-You can visualize model predictions using the `TradingGUI` class:
+The `TradingGUI` class provides an interactive window to inspect multiple
+symbols. Load a CSV file with `symbol`, `time`, `price`, `volume`, and optional
+`open_interest` columns. Select which symbols to display and start the
+prediction process.
 
 ```python
 from pocketoptionapi.gui import TradingGUI
@@ -94,6 +97,11 @@ from pocketoptionapi.gui import TradingGUI
 gui = TradingGUI(symbols=["EURUSD", "GBPUSD"])
 gui.run()
 ```
+
+The chart shows historical prices together with predicted values (dashed lines).
+Volume and open interest are drawn as overlays and suspected manipulation events
+are marked with red dots. Use the toolbar to zoom or pan the view while the
+progress bar indicates prediction progress.
 
 ## 🔧 Settings
 

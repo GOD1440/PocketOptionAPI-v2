@@ -65,10 +65,23 @@ days = 1
 time_start = int(datetime.now().timestamp())
 time_end = time_start - 86400 * days
 df = api.get_history(
-    pair, 
-    period, 
-    start_time=time_start, 
+    pair,
+    period,
+    start_time=time_start,
     end_time=time_end)
+```
+
+### Pattern Detection Example
+```python
+from pocketoptionapi.ml.pattern_detector import MultiSymbolPatternDetector, TickData
+
+# initialise detector for two symbols
+detector = MultiSymbolPatternDetector(["EURUSD", "GBPUSD"])
+
+# add ticks in your data feed loop
+tick = TickData(timestamp=time.time(), price=1.2345)
+result = detector.add_tick("EURUSD", tick)
+print(result)
 ```
 
 ## 🔧 Settings

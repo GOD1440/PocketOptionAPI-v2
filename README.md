@@ -93,6 +93,16 @@ To get the SSID required for authentication:
 
 How To get SSID.docx [HERE](https://github.com/Mastaaa1987/PocketOptionAPI/raw/refs/heads/master/How%20to%20get%20SSID.docx)
 
+### GUI Dashboard
+An interactive dashboard is provided in `dashboard.py` for visualizing price data,
+running predictions and highlighting potential manipulation. After installing the
+requirements, launch it with:
+```bash
+python dashboard.py
+```
+Upload CSV files with columns `time`, `open`, `high`, `low`, `close`, `volume`
+and `open_interest` to explore multiple symbols at once.
+
 ## 🤝 Contributing
 
 Your contribution is very welcome! Follow these steps:
